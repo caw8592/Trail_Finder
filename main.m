@@ -1,15 +1,20 @@
 % this is the main driver file
 
-% read in image/-s
-% convert to lab
-% binarize from a threshold
+% preprocess
 % find trailmarkers
-    % find circles
-    % check if they are surrounded by brown?
 % bright orange circle 2x marker diameter
 
-fix_image()
+img_path = 'ADK_Images_Batch_A/IMG_20251004_152341611_HDR.jpg';
+img = imread(img_path);
 
-find_marker()
+processed_img = preprocess_image(img);
 
-draw_circle()
+%find_marker()
+
+%draw_circle()
+
+figure;
+subplot(1,2,1);
+imshow(img);
+subplot(1,2,2);
+imshow(processed_img);
