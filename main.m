@@ -9,12 +9,9 @@ img = imread(img_path);
 
 processed_img = preprocess_image(img);
 
-%find_marker()
+[centers, radii] = find_marker(processed_img);
 
 %draw_circle()
 
-figure;
-subplot(1,2,1);
 imshow(img);
-subplot(1,2,2);
-imshow(processed_img);
+viscircles(centers, radii*2, Color='#FFA500');
