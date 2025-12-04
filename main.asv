@@ -1,0 +1,5 @@
+% this is the main driver file
+
+% read in image/-s
+% convert to lab
+% binarize 
